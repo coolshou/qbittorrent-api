@@ -1,0 +1,40 @@
+Source: qbittorrentapi
+Section: unknown
+Priority: optional
+Maintainer: coolshou <coolshou2060@gmail.com>
+Rules-Requires-Root: no
+Build-Depends:
+ debhelper-compat (= 13),
+ dh-sequence-python3,
+ python3-setuptools,
+ python3-all,
+#Testsuite: autopkgtest-pkg-python
+Standards-Version: 4.6.2
+Homepage: https://pypi.org/project/qbittorrent-api
+#Vcs-Browser: https://salsa.debian.org/debian/qbittorrentapi
+#Vcs-Git: https://salsa.debian.org/debian/qbittorrentapi.git
+
+Package: python3-qbittorrentapi
+Architecture: all
+Multi-Arch: foreign
+Depends:
+ ${python3:Depends},
+ ${misc:Depends},
+Suggests:
+ python-qbittorrentapi-doc,
+Description: Python client implementation for qBittorrent Web API
+ Python client implementation for qBittorrent Web API
+ .
+ This package installs the library for Python 3.
+
+Package: python-qbittorrentapi-doc
+Section: doc
+Architecture: all
+Multi-Arch: foreign
+Depends:
+ ${sphinxdoc:Depends},
+ ${misc:Depends},
+Description: Python client implementation for qBittorrent Web API documentation
+ Python client implementation for qBittorrent Web API documentation
+ .
+ This is the common documentation package.
